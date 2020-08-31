@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <title>Research Institute</title>
+    <link rel="stylesheet" href="./stylesheets/researchForm.css" />
+    <script src="./javascripts/researchFormValidation.js"></script>
+  </head>
+	<body>
+    <header>
+      <h1>Research Form</h1>
+      <form action="http://localhost:3000/processForm" method="post">
+        <fieldset>
+            <legend><em>General Information</em></legend>
+            <strong>Firstname: </strong><input id="Firstname" required type="text" name="firstname" />
+            <strong>Lastname: </strong><input id="Lastname" required type="text" name="lastname" /><br /><br />
+            <strong>Phone: </strong><input id="phoneFirstPart" required type="text" size="3" required maxlength="3" name="phoneFirstPart" />
+            - 
+            <input id="phoneSecondPart" type="text" required size="3" maxlength="3" name="phoneSecondPart" />
+            - 
+            <input id="phoneThirdPart" type="text" required size="4" maxlength="4" name="phoneThirdPart" />
+            <strong>Email: </strong><input required id="email" type="email" name="email"/><br /><br />
+        </fieldset>
+        <fieldset>
+          <legend><em>Research Study Data</em></legend>
+          <fieldset>
+            <legend><em>Age/Height/Weight</em></legend>
+            <strong>Age: </strong><input size="3" min="1" max="125" id="age" type="number" name="age" />
+            <strong>Height: </strong>
+            <input size="3" min="2" max="7" id="heightFeet" type="number" name="heightFeet" />
+            Feet 
+            <input size="3" min="0" max="11" id="heightInches" type="number" name="heightInches" />
+            Inches
+            <strong>Weight: </strong><input size="3" min="1" max="600" id="weight" type="number" name="weight" />
+          </fieldset>
+          <fieldset>
+            <legend><em>Conditions</em></legend>
+            Which of the following conditions are present in your family? (Check all that apply) <br>
+            <input type="checkbox" id="highBloodPressure" name="highBloodPressure" value="highBloodPressure" />High Blood Pressure
+            <input type="checkbox" id="diabetes" name="diabetes" value="diabetes"/>Diabetes
+            <input type="checkbox" id="glaucoma" name="glaucoma" value="glaucoma"/>Glaucoma
+            <input type="checkbox" id="asthma" name="asthma" value="asthma"/>Asthma
+            <input type="checkbox" id="none" name="none" value="none"/>None
+          </fieldset>
+          <fieldset>
+            <legend><em>Time Period</em></legend>
+            How long have you experienced any of the above conditions? <br>
+            <input type="radio" id="never" name="period" value="never" />Never
+			      <input type="radio" id="LessThanAYear" name="period" value="LessThanAYear" />Less than a year
+            <input type="radio" id="OneToTwoYears" name="period" value="OneToTwoYears" />One to two years
+            <input type="radio" id="MoreThanTwoYears" name="period" value="MoreThanTwoYears" />More than two years
+          </fieldset>
+
+          <fieldset>
+            <legend><em>Study Information</em></legend>
+            Which study are you taking part of? 
+            <select id="studyType" name="studyType">
+              <option value="shortTerm">Short Term</option>
+              <option value="longTerm" selected="selected">Long Term</option>
+            </select>
+            Assigned Study Id: 
+            <input required id="firstFourDigits" type="text" size="4" maxlength="4" name="firstFourDigits" />
+            - 
+            <input required id="secondFourDigits" type="text" size="4" maxlength="4" name="secondFourDigits" />
+          </fieldset>
+
+          <fieldset>
+            <legend> <em> Additional Information (comments)</em> </legend>
+            <textarea id="comments" name="comments" rows="8" cols="50"></textarea>
+          </fieldset>
+
+
+      </fieldset>
+      <fieldset>
+        <input type="reset" value="Clear Form"/>
+        <input type="submit" value="Submit Information"/>
+      </fieldset>
+    </form>
+  </header>
+  <section>
+    </section>    
+    <footer>
+      CMSC Research Institute &reg;
+    </footer>
+  </body>
+</html>
