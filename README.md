@@ -1,5 +1,5 @@
 # Research-Form
-My first project implementing basic skills of HTML/CSS and Javascript Form Validation. 
+My first project implementing basic skills of HTML/CSS and Javascript Form Validation. The goal was to practice forms, basic css, data validation, data collection, and events in JavaScript.
 
 The Implemented Code for this project is in researchServer -> public
 
